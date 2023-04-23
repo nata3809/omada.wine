@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 li {
   font-family: "Jost", sans-serif;
 }

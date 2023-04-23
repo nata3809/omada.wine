@@ -41,7 +41,7 @@ function getFirstNChars(str, length) {
       <div class="grid_2">
         <h2>Our store</h2>
         <div class="grid_3">
-          <img src="/public/ævle-025.webp" alt="f" />
+          <img src="/img/ævle-025.webp" alt="f" />
           <p>Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine headquarters – and our brand new bottle shop and deli. Here, we curate your simple needs for life’s better necessities; wine & food. In the shop you can find the complete line up of natural wine, cider and other mixed fermentations that you know from omada.wine. And you may even enjoy a glass of wine before you decide which bottle to take home.</p>
         </div>
       </div>
@@ -49,11 +49,19 @@ function getFirstNChars(str, length) {
         <h2>Deli goods</h2>
         <p>Thirsty? Peckish? Curious? We’ve got you covered!</p>
         <p>Omada Wine & Deli feeds your simple needs for life’s better necessities; wine & food.</p>
+        <h3>Deli goods</h3>
         <div class="grid_5">
-          <img class="preview" src="/public/ævle-025.webp" alt="f" />
-          <img class="preview" src="/public/ævle-025.webp" alt="f" />
-          <img class="preview" src="/public/ævle-025.webp" alt="f" />
-          <img class="preview" src="/public/ævle-025.webp" alt="f" />
+          <img class="preview" src="/img/ævle-100.webp" alt="f" />
+          <img class="preview" src="/img/ævle-025.webp" alt="f" />
+          <img class="preview" src="/img/ævle-025.webp" alt="f" />
+          <img class="preview" src="/img/ævle-025.webp" alt="f" />
+        </div>
+        <h3>Accessories</h3>
+        <div class="grid_5">
+          <img class="preview" src="/img/ævle-100.webp" alt="f" />
+          <img class="preview" src="/img/ævle-025.webp" alt="f" />
+          <img class="preview" src="/img/ævle-025.webp" alt="f" />
+          <img class="preview" src="/img/ævle-025.webp" alt="f" />
         </div>
       </div>
       <div class="grid_6">
@@ -88,6 +96,12 @@ function getFirstNChars(str, length) {
   <style>
     h1 {
       place-self: center;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 100%;
+      height: auto;
     }
 
     button {
@@ -145,6 +159,7 @@ function getFirstNChars(str, length) {
     .grid_5 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin: 20px;
     }
 
     .grid_6 {
