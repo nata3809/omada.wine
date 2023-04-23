@@ -4,8 +4,10 @@ import Mainlayout from "../layouts/Mainlayout.astro";
 import Form from "../components/Form.astro";
 import Testimonial from "../components/Testimonial.astro";
 
-const url = "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse?approved=is.true";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
+const url =
+  "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse?approved=is.true";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
 
 const response = await fetch(url, {
   method: "GET",
@@ -42,53 +44,99 @@ function getFirstNChars(str, length) {
         <h2>Our store</h2>
         <div class="grid_3">
           <img src="/img/ævle-025.webp" alt="f" />
-          <p>Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine headquarters – and our brand new bottle shop and deli. Here, we curate your simple needs for life’s better necessities; wine & food. In the shop you can find the complete line up of natural wine, cider and other mixed fermentations that you know from omada.wine. And you may even enjoy a glass of wine before you decide which bottle to take home.</p>
+          <p>
+            Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine
+            headquarters – and our brand new bottle shop and deli. Here, we
+            curate your simple needs for life’s better necessities; wine & food.
+            In the shop you can find the complete line up of natural wine, cider
+            and other mixed fermentations that you know from omada.wine. And you
+            may even enjoy a glass of wine before you decide which bottle to
+            take home.
+          </p>
         </div>
       </div>
       <div class="grid_4">
         <h2>Deli goods</h2>
         <p>Thirsty? Peckish? Curious? We’ve got you covered!</p>
-        <p>Omada Wine & Deli feeds your simple needs for life’s better necessities; wine & food.</p>
-        <h3>Deli goods</h3>
-        <div class="grid_5">
-          <img class="preview" src="/img/ævle-100.webp" alt="f" />
-          <img class="preview" src="/img/ævle-025.webp" alt="f" />
-          <img class="preview" src="/img/ævle-025.webp" alt="f" />
-          <img class="preview" src="/img/ævle-025.webp" alt="f" />
+        <p>
+          Omada Wine & Deli feeds your simple needs for life’s better
+          necessities; wine & food.
+        </p>
+        <div class="grid_7">
+          <h3>Deli Goods</h3>
         </div>
-        <h3>Accessories</h3>
-        <div class="grid_5">
-          <img class="preview" src="/img/ævle-100.webp" alt="f" />
-          <img class="preview" src="/img/ævle-025.webp" alt="f" />
-          <img class="preview" src="/img/ævle-025.webp" alt="f" />
-          <img class="preview" src="/img/ævle-025.webp" alt="f" />
-        </div>
-      </div>
-      <div class="grid_6">
-        <h2>Shop by category</h2>
 
-        <ul>
+        <div class="grid_5">
+          <img class="preview1" src="/img/ævle-121.webp" alt="f" />
+
+          <img class="preview2" src="/img/ævle-142.webp" alt="f" />
+          <img class="preview3" src="/img/ævle-025.webp" alt="f" />
+          <img class="preview4" src="/img/ævle-127.webp" alt="f" />
+        </div>
+        <div class="grid_8">
+          <div class="grid_9">
+            <p>5 €</p>
+          </div>
+          <div class="grid_9">
+            <p>13 € - 39,5 €</p>
+          </div>
+          <div class="grid_9">
+            <p>9 €</p>
+          </div>
+          <div class="grid_10">
+            <p>13 €</p>
+          </div>
           <button>
-            <a href="">Food</a>
+            <a href="">View all deli goods</a>
           </button>
+        </div>
+
+        <div class="grid_7">
+          <h3>Accessories</h3>
+        </div>
+
+        <div class="grid_5">
+          <img class="preview1" src="/img/ævle-145.webp" alt="f" />
+          <img class="preview2" src="/img/ævle-160.webp" alt="f" />
+          <img class="preview3" src="/img/ævle-145.webp" alt="f" />
+          <img class="preview4" src="/img/ævle-160.webp" alt="f" />
+        </div>
+        <div class="grid_8">
+          <div class="grid_9">
+            <p>5 €</p>
+          </div>
+          <div class="grid_9">
+            <p>30 €</p>
+          </div>
+          <div class="grid_9">
+            <p>5 €</p>
+          </div>
+          <div class="grid_10">
+            <p>30 €</p>
+          </div>
           <button>
-            <a href="">Drinks</a>
+            <a href="">View all accessories</a>
           </button>
-          <button>
-            <a href="">Accessories</a>
-          </button>
-        </ul>
-      </div>
-      <div>
-        <Form />
-        <h2>Reviews</h2>
-        <ul>
-          {
-            udsagn.map((testimonial) => {
-              return <Testimonial name={testimonial.name} overskrift={testimonial.overskrift} text={getFirstNChars(testimonial.text, 30) + "..."} link={"/testimonial/" + testimonial.id} />;
-            })
-          }
-        </ul>
+        </div>
+
+        <div>
+          <Form />
+          <h2>Reviews</h2>
+          <ul>
+            {
+              udsagn.map((testimonial) => {
+                return (
+                  <Testimonial
+                    name={testimonial.name}
+                    overskrift={testimonial.overskrift}
+                    text={getFirstNChars(testimonial.text, 30) + "..."}
+                    link={"/testimonial/" + testimonial.id}
+                  />
+                );
+              })
+            }
+          </ul>
+        </div>
       </div>
     </main>
   </Layout>
@@ -106,11 +154,11 @@ function getFirstNChars(str, length) {
 
     button {
       list-style-type: none;
-      border: solid #cf2e2e;
-      border-radius: 5px;
+      border: 1px solid #cf2e2e;
+
       background-color: #fffef3;
       padding: 10px 40px 10px 40px;
-      margin: 10px;
+      margin-top: 20px;
     }
 
     a {
@@ -159,17 +207,49 @@ function getFirstNChars(str, length) {
     .grid_5 {
       display: flex;
       flex-direction: row;
-      margin: 20px;
-      flex-grow: 3;
+      justify-content: center;
+    }
+    .grid_5 img {
+      max-width: 30%;
+      overflow: hidden;
     }
 
-    .grid_6 {
+    .grid_8 {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .grid_9 {
+      border: 1px solid #cf2e2e;
+      text-align: center;
+      border-top: none;
+      border-right: none;
+    }
+    .grid_10 {
+      border: 1px solid #cf2e2e;
+      border-top: none;
+      text-align: center;
     }
 
-    .preview {
-      border: solid black;
+    .preview1 {
+      border: 1px solid #cf2e2e;
+      border-right: none;
+    }
+
+    .preview2 {
+      border: 1px solid #cf2e2e;
+      border-right: none;
+    }
+    .preview3 {
+      border: 1px solid #cf2e2e;
+    }
+    .preview4 {
+      border: 1px solid #cf2e2e;
+      border-left: none;
+    }
+
+    .grid_7 {
+      border-top: 1px solid #cf2e2e;
+      margin-top: 90px;
     }
   </style>
 </html>
