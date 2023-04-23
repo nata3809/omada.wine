@@ -1,0 +1,39 @@
+---
+import Mainlayout from "../layouts/Mainlayout.astro";
+import Testimonial from "../components/Testimonial.astro";
+
+export async function getStaticPaths() {
+  const url = "https://dvmptwdziademulaatzd.supabase.co/rest/v1/testimonials?approved=is.true";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR2bXB0d2R6aWFkZW11bGFhdHpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg2OTc1MTMsImV4cCI6MTk5NDI3MzUxM30.89WAyrAnFikazYnvmF6-hyrpZt58wAyRMAw78SeHOhk";
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+  const response = await fetch(url, options);
+  const data = await response.json();
+
+  return data.map((testimonial) => {
+    return {
+      params: { id: testimonial.id },
+      props: { testimonial },
+    };
+  });
+}
+const { testimonial } = Astro.props;
+console.log(testimonial);
+---
+
+<Mainlayout title={testimonial.overskrift}>
+  <main>
+    <p>"{testimonial.text}"</p>
+    <em>{testimonial.name}</em>
+  </main>
+</Mainlayout>
+
+<style>
+  main {
+    width: 90vw;
+    max-width: 500px;
+  }
+</style>
