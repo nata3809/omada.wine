@@ -1,0 +1,61 @@
+---
+import "../styles/style.css";
+---
+
+<section>
+  <div class="footer">
+    <div class="grid_1">
+      <h1>Omada.wine</h1>
+      <p>
+        The dedicated online hideout for the worldly cosmopolitans, drinking
+        from home.
+      </p>
+      <div><img src="/img/pay.webp" alt="d" /></div>
+    </div>
+
+    <div>
+      <p>The Wine Journal</p>
+      <p>About us</p>
+      <p>Omada Industry</p>
+      <p>Contact us</p>
+      <p>Delivery</p>
+      <p>Payments</p>
+    </div>
+
+    <div>
+      <p>Industry login</p>
+      <p>Partner login</p>
+      <p>Privacy policy</p>
+      <p>Cookie policy</p>
+      <p>Terms & Conditions</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .footer {
+    background-color: #e8e2d6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+  .grid_1 img {
+    max-width: 200px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .grid_1 {
+    display: grid;
+    gap: 20px;
+  }
+
+  @media (max-width: 650px) {
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+</style>

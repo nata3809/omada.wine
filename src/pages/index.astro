@@ -44,17 +44,19 @@ function getFirstNChars(str, length) {
       <div class="grid_2">
         <div class="grid_33"><img src="/img/butik.webp" alt="f" /></div>
 
-        <div class="grid_22">
-          <h2>Our store</h2>
-          <p>
-            Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine
-            headquarters – and our brand new bottle shop and deli. Here, we
-            curate your simple needs for life’s better necessities; wine & food.
-            In the shop you can find the complete line up of natural wine, cider
-            and other mixed fermentations that you know from omada.wine. And you
-            may even enjoy a glass of wine before you decide which bottle to
-            take home.
-          </p>
+        <div>
+          <div class="grid_222">
+            <h2>Our store</h2>
+            <p>
+              Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine
+              headquarters – and our brand new bottle shop and deli. Here, we
+              curate your simple needs for life’s better necessities; wine &
+              food. In the shop you can find the complete line up of natural
+              wine, cider and other mixed fermentations that you know from
+              omada.wine. And you may even enjoy a glass of wine before you
+              decide which bottle to take home.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -153,6 +155,15 @@ function getFirstNChars(str, length) {
           </button>
         </div>
 
+        <div class="grid_11">
+          <div>
+            <h3>News and Events</h3>
+          </div>
+          <div class="grid_11img">
+            <img src="/img/IMG_1380.webp" alt="f" />
+          </div>
+        </div>
+
         <div>
           <Form />
           <h2>Reviews</h2>
@@ -189,20 +200,22 @@ function getFirstNChars(str, length) {
     button {
       list-style-type: none;
       border: 1px solid #cf2e2e;
-
       background-color: #fffef3;
       padding: 10px 40px 10px 40px;
       margin-top: 20px;
+      transition-duration: 0.4s;
+      cursor: pointer;
     }
-
     a {
       text-decoration: none;
       color: #cf2e2e;
     }
+
     button:hover,
     a:hover {
       color: #fffef3;
       background-color: #cf2e2e;
+      transition: 0.4s;
     }
 
     ul {
@@ -218,27 +231,32 @@ function getFirstNChars(str, length) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       background-color: #e8e2d6;
+      text-align: center;
     }
 
-    h2 {
-      place-self: center;
+    .grid_222 {
+      display: grid;
+      text-align: center;
+      margin-right: 110px;
     }
-
     .grid_3 {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
 
-    .grid_3 img {
-      max-width: 60%;
+    .grid_33 img {
+      max-width: 65%;
     }
-    .grid_33 {
-    }
+
     .grid_4 {
       display: grid;
       grid-template-columns: 1fr;
+      margin-top: 100px;
     }
 
+    h2 {
+      text-align: center;
+    }
     p {
       place-self: center;
     }
@@ -289,6 +307,17 @@ function getFirstNChars(str, length) {
     .grid_7 {
       border-top: 1px solid #cf2e2e;
       margin-top: 90px;
+    }
+
+    .grid_11 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 90px;
+      background-color: #e8e2d6;
+    }
+
+    .grid_11 img {
+      max-width: 60%;
     }
   </style>
 </html>

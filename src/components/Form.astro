@@ -18,8 +18,10 @@ import "../styles/style.css";
   <button>SEND</button>
 </form>
 <script>
-  const url = "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse";
-  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
+  const url =
+    "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
 
   const form = document.querySelector("form");
   form.addEventListener("submit", sendForm);
@@ -53,6 +55,7 @@ import "../styles/style.css";
     background-color: #fffef3;
     padding: 10px 40px 10px 40px;
     margin: 10px;
+    transition-duration: 0.4s;
   }
 
   a {
