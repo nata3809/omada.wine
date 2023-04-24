@@ -3,9 +3,18 @@ const { overskrift, name, text, link } = Astro.props;
 ---
 
 <li class="testimonial">
-  <h2>{overskrift}</h2>
-  <p>{text}<br /><em>{name}</em></p>
-  <a href={link}>Læs mere</a>
+  <div>
+    <h4>{overskrift}</h4>
+    <p>{text}<br /><em>{name}</em></p>
+    <a href={link}>Læs mere</a>
+  </div>
 </li>
 
-<style></style>
+<style>
+  h4 {
+    font-size: 1rem;
+  }
+  li {
+    list-style-type: none;
+  }
+</style>

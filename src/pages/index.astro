@@ -4,10 +4,8 @@ import Mainlayout from "../layouts/Mainlayout.astro";
 import Form from "../components/Form.astro";
 import Testimonial from "../components/Testimonial.astro";
 
-const url =
-  "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse?approved=is.true";
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
+const url = "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse?approved=is.true";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
 
 const response = await fetch(url, {
   method: "GET",
@@ -47,15 +45,7 @@ function getFirstNChars(str, length) {
         <div>
           <div class="grid_222">
             <h2>Our store</h2>
-            <p>
-              Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine
-              headquarters – and our brand new bottle shop and deli. Here, we
-              curate your simple needs for life’s better necessities; wine &
-              food. In the shop you can find the complete line up of natural
-              wine, cider and other mixed fermentations that you know from
-              omada.wine. And you may even enjoy a glass of wine before you
-              decide which bottle to take home.
-            </p>
+            <p>Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine headquarters – and our brand new bottle shop and deli. Here, we curate your simple needs for life’s better necessities; wine & food. In the shop you can find the complete line up of natural wine, cider and other mixed fermentations that you know from omada.wine. And you may even enjoy a glass of wine before you decide which bottle to take home.</p>
           </div>
         </div>
       </div>
@@ -63,35 +53,16 @@ function getFirstNChars(str, length) {
       <div class="grid_4">
         <h2>Deli goods</h2>
         <p>Thirsty? Peckish? Curious? We’ve got you covered!</p>
-        <p>
-          Omada Wine & Deli feeds your simple needs for life’s better
-          necessities; wine & food.
-        </p>
+        <p>Omada Wine & Deli feeds your simple needs for life’s better necessities; wine & food.</p>
         <div class="grid_7">
           <h3>Deli Goods</h3>
         </div>
 
         <div class="grid_5">
-          <img
-            class="preview1"
-            src="/img/ævle-121.webp"
-            alt="Delikatesse krydderi gurkemaje"
-          />
-          <img
-            class="preview2"
-            src="/img/ævle-142.webp"
-            alt="Økologisk delikatsse kaffe"
-          />
-          <img
-            class="preview3"
-            src="/img/ævle-025.webp"
-            alt="Delikatesse syltede ansjoser"
-          />
-          <img
-            class="preview4"
-            src="/img/ævle-127.webp"
-            alt="Delikatesse krydderipakke med gurkemaje, gløgg krydderi og sort peber"
-          />
+          <img class="preview1" src="/img/ævle-121.webp" alt="Delikatesse krydderi gurkemaje" />
+          <img class="preview2" src="/img/ævle-142.webp" alt="Økologisk delikatsse kaffe" />
+          <img class="preview3" src="/img/ævle-025.webp" alt="Delikatesse syltede ansjoser" />
+          <img class="preview4" src="/img/ævle-127.webp" alt="Delikatesse krydderipakke med gurkemaje, gløgg krydderi og sort peber" />
         </div>
         <div class="grid_8">
           <div class="grid_9">
@@ -116,26 +87,10 @@ function getFirstNChars(str, length) {
         </div>
 
         <div class="grid_5">
-          <img
-            class="preview1"
-            src="/img/ævle-145.webp"
-            alt="Shopping net i økologisk bomuld"
-          />
-          <img
-            class="preview2"
-            src="/img/ævle-160.webp"
-            alt="Shopping net i økologisk bomuld med naturvin og proptrækker"
-          />
-          <img
-            class="preview3"
-            src="/img/ævle-145.webp"
-            alt="Shopping net i økologisk bomuld"
-          />
-          <img
-            class="preview4"
-            src="/img/ævle-160.webp"
-            alt="Shopping net i økologisk bomuld med naturvin og proptrækker"
-          />
+          <img class="preview1" src="/img/ævle-145.webp" alt="Shopping net i økologisk bomuld" />
+          <img class="preview2" src="/img/ævle-160.webp" alt="Shopping net i økologisk bomuld med naturvin og proptrækker" />
+          <img class="preview3" src="/img/ævle-145.webp" alt="Shopping net i økologisk bomuld" />
+          <img class="preview4" src="/img/ævle-160.webp" alt="Shopping net i økologisk bomuld med naturvin og proptrækker" />
         </div>
         <div class="grid_8">
           <div class="grid_9">
@@ -165,19 +120,14 @@ function getFirstNChars(str, length) {
         </div>
 
         <div>
-          <Form />
+          <div class="form_grid">
+            <Form />
+          </div>
           <h2>Reviews</h2>
-          <ul>
+          <ul class="review_grid2">
             {
               udsagn.map((testimonial) => {
-                return (
-                  <Testimonial
-                    name={testimonial.name}
-                    overskrift={testimonial.overskrift}
-                    text={getFirstNChars(testimonial.text, 30) + "..."}
-                    link={"/testimonial/" + testimonial.id}
-                  />
-                );
+                return <Testimonial name={testimonial.name} overskrift={testimonial.overskrift} text={getFirstNChars(testimonial.text, 30) + "..."} link={"/testimonial/" + testimonial.id} />;
               })
             }
           </ul>
@@ -318,6 +268,17 @@ function getFirstNChars(str, length) {
 
     .grid_11 img {
       max-width: 60%;
+    }
+
+    .review_grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 20px;
+      margin-bottom: 70px;
+    }
+
+    .form_grid {
+      margin-top: 70px;
     }
   </style>
 </html>

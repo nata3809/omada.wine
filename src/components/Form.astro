@@ -2,26 +2,24 @@
 import "../styles/style.css";
 ---
 
-<form>
+<form class="form_grid">
   <div>
-    <label for="name">Navn</label>
+    <label for="name">Name</label>
     <input class="input_1" type="text" name="name" required />
   </div>
   <div>
-    <label for="overskrift">Overskrift</label>
+    <label for="overskrift">Heading</label>
     <input type="text" name="overskrift" required />
   </div>
   <div>
-    <label for="text">Tekst</label>
+    <label for="text">Review text</label>
     <input class="input_3" type="text" name="text" required />
   </div>
-  <button>SEND</button>
+  <button>SUBMIT</button>
 </form>
 <script>
-  const url =
-    "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse";
-  const key =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
+  const url = "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
 
   const form = document.querySelector("form");
   form.addEventListener("submit", sendForm);
@@ -56,6 +54,9 @@ import "../styles/style.css";
     padding: 10px 40px 10px 40px;
     margin: 10px;
     transition-duration: 0.4s;
+    grid-column: 2;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   a {
@@ -83,11 +84,8 @@ import "../styles/style.css";
     margin: 20px;
   }
 
-  .input_1 {
-    margin-left: 40px;
-  }
-
-  .input_3 {
-    margin-left: 42px;
+  .form_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 </style>
