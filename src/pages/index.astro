@@ -36,9 +36,12 @@ function getFirstNChars(str, length) {
 
   <Layout>
     <main>
+      <div class="video_container">
+        <video autoplay muted playsinline loop src="img/video1.webm"></video>
+      </div>
+
       <div class="grid_1">
         <h1>Local Deli Goods</h1>
-        <img src="" alt="" />
       </div>
 
       <div class="grid_2">
@@ -277,6 +280,8 @@ function getFirstNChars(str, length) {
     .grid_1 {
       display: grid;
       grid-template-columns: 1fr;
+      border-top: 2px solid #cf2e2e;
+      margin-top: 140px;
     }
 
     .grid_2 {
@@ -410,6 +415,15 @@ function getFirstNChars(str, length) {
       font-family: "Jost", sans-serif;
       font-size: 1rem;
       margin-left: 40px;
+    }
+
+    .video_container {
+      overflow: hidden;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+    .video_container video {
+      object-fit: cover;
     }
   </style>
 </html>
