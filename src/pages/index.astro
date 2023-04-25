@@ -4,8 +4,10 @@ import Mainlayout from "../layouts/Mainlayout.astro";
 import Form from "../components/Form.astro";
 import Testimonial from "../components/Testimonial.astro";
 
-const url = "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse?approved=is.true";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
+const url =
+  "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse?approved=is.true";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
 
 const response = await fetch(url, {
   method: "GET",
@@ -44,12 +46,25 @@ function getFirstNChars(str, length) {
       </div>
 
       <div class="grid_2">
-        <div class="grid_33"><img src="/img/butik.webp" alt="Facade af specialforretning København" /></div>
+        <div class="grid_33">
+          <img
+            src="/img/butik.webp"
+            alt="Facade af specialforretning København"
+          />
+        </div>
 
         <div>
           <div class="grid_222">
             <h2>Our store</h2>
-            <p>Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine headquarters – and our brand new bottle shop and deli. Here, we curate your simple needs for life’s better necessities; wine & food. In the shop you can find the complete line up of natural wine, cider and other mixed fermentations that you know from omada.wine. And you may even enjoy a glass of wine before you decide which bottle to take home.</p>
+            <p>
+              Omada Wine & Deli in Østerbro, Copenhagen, is the new omada.wine
+              headquarters – and our brand new bottle shop and deli. Here, we
+              curate your simple needs for life’s better necessities; wine &
+              food. In the shop you can find the complete line up of natural
+              wine, cider and other mixed fermentations that you know from
+              omada.wine. And you may even enjoy a glass of wine before you
+              decide which bottle to take home.
+            </p>
           </div>
         </div>
       </div>
@@ -57,16 +72,35 @@ function getFirstNChars(str, length) {
       <div class="grid_4">
         <h2>Deli goods</h2>
         <p>Thirsty? Peckish? Curious? We’ve got you covered!</p>
-        <p>Omada Wine & Deli feeds your simple needs for life’s better necessities; wine & food.</p>
+        <p>
+          Omada Wine & Deli feeds your simple needs for life’s better
+          necessities; wine & food.
+        </p>
         <div class="grid_7">
           <h3>Deli Goods</h3>
         </div>
 
         <div class="grid_5">
-          <img class="preview1" src="/img/ævle-121.webp" alt="Delikatesse krydderi gurkemaje" />
-          <img class="preview2" src="/img/ævle-142.webp" alt="Økologisk delikatsse kaffe" />
-          <img class="preview3" src="/img/ævle-025.webp" alt="Delikatesse syltede ansjoser" />
-          <img class="preview4" src="/img/ævle-127.webp" alt="Delikatesse krydderipakke med gurkemaje, gløgg krydderi og sort peber" />
+          <img
+            class="preview1"
+            src="/img/ævle-121.webp"
+            alt="Delikatesse krydderi gurkemaje"
+          />
+          <img
+            class="preview2"
+            src="/img/ævle-142.webp"
+            alt="Økologisk delikatsse kaffe"
+          />
+          <img
+            class="preview3"
+            src="/img/ævle-025.webp"
+            alt="Delikatesse syltede ansjoser"
+          />
+          <img
+            class="preview4"
+            src="/img/ævle-127.webp"
+            alt="Delikatesse krydderipakke med gurkemaje, gløgg krydderi og sort peber"
+          />
         </div>
         <div class="grid_8">
           <div class="grid_9">
@@ -81,8 +115,10 @@ function getFirstNChars(str, length) {
           <div class="grid_10">
             <p>13 €</p>
           </div>
+        </div>
+        <div class="button_grid">
           <button>
-            <a href="">View all deli goods</a>
+            <a class="knap" href="">View all deli goods</a>
           </button>
         </div>
 
@@ -91,10 +127,26 @@ function getFirstNChars(str, length) {
         </div>
 
         <div class="grid_5">
-          <img class="preview1" src="/img/ævle-145.webp" alt="Shopping net i økologisk bomuld" />
-          <img class="preview2" src="/img/ævle-160.webp" alt="Shopping net i økologisk bomuld med naturvin og proptrækker" />
-          <img class="preview3" src="/img/ævle-145.webp" alt="Shopping net i økologisk bomuld" />
-          <img class="preview4" src="/img/ævle-160.webp" alt="Shopping net i økologisk bomuld med naturvin og proptrækker" />
+          <img
+            class="preview1"
+            src="/img/ævle-145.webp"
+            alt="Shopping net i økologisk bomuld"
+          />
+          <img
+            class="preview2"
+            src="/img/ævle-160.webp"
+            alt="Shopping net i økologisk bomuld med naturvin og proptrækker"
+          />
+          <img
+            class="preview3"
+            src="/img/ævle-145.webp"
+            alt="Shopping net i økologisk bomuld"
+          />
+          <img
+            class="preview4"
+            src="/img/ævle-160.webp"
+            alt="Shopping net i økologisk bomuld med naturvin og proptrækker"
+          />
         </div>
         <div class="grid_8">
           <div class="grid_9">
@@ -109,14 +161,18 @@ function getFirstNChars(str, length) {
           <div class="grid_10">
             <p>30 €</p>
           </div>
+        </div>
+        <div class="button_grid">
           <button>
-            <a href="">View all accessories</a>
+            <a class="knap" href="">View accesories</a>
           </button>
         </div>
-
         <div class="grid_11">
           <div class="grid_11img">
-            <img src="/img/IMG_1380.webp" alt="Udeservering af naturvin og lokale økologiske delikatesser" />
+            <img
+              src="/img/IMG_1380.webp"
+              alt="Udeservering af naturvin og lokale økologiske delikatesser"
+            />
           </div>
           <div>
             <div class="events3"><h3>News and Events</h3></div>
@@ -168,7 +224,10 @@ function getFirstNChars(str, length) {
             </div>
 
             <div>
-              <img src="/img/drink.webp" alt="Udeservering af naturvin og økologisk saft i lokal delikatesseforretning" />
+              <img
+                src="/img/drink.webp"
+                alt="Udeservering af naturvin og økologisk saft i lokal delikatesseforretning"
+              />
             </div>
           </div>
 
@@ -177,7 +236,14 @@ function getFirstNChars(str, length) {
             <ul class="review_grid2">
               {
                 udsagn.map((testimonial) => {
-                  return <Testimonial name={testimonial.name} overskrift={testimonial.overskrift} text={getFirstNChars(testimonial.text, 30) + "..."} link={"/testimonial/" + testimonial.id} />;
+                  return (
+                    <Testimonial
+                      name={testimonial.name}
+                      overskrift={testimonial.overskrift}
+                      text={getFirstNChars(testimonial.text, 30) + "..."}
+                      link={"/testimonial/" + testimonial.id}
+                    />
+                  );
                 })
               }
             </ul>
@@ -222,6 +288,12 @@ function getFirstNChars(str, length) {
       transition: 0.4s;
     }
 
+    .button_grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .knap {
+      grid-column: 1;
+    }
     ul {
       place-self: center;
     }
@@ -373,6 +445,54 @@ function getFirstNChars(str, length) {
     }
     .video_container video {
       object-fit: cover;
+    }
+
+    @media (max-width: 650px) {
+      video,
+      .video_container {
+        display: none;
+      }
+
+      main {
+        display: block;
+        overflow: hidden;
+      }
+      .grid_2,
+      .grid_222,
+      .grid_4,
+      .grid_11,
+      .grid_1 {
+        display: block;
+        text-align: center;
+        border: none;
+      }
+      .grid_11img {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .grid_1 {
+        border-bottom: solid 1px #cf2e2e;
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+      .grid_222 {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      .grid_7 {
+        margin-top: 80px;
+      }
+      .form_text {
+        grid-template-columns: 1fr;
+      }
+      .form_grid {
+        display: grid;
+      }
+      .tider {
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
     }
   </style>
 </html>
