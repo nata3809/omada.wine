@@ -2,24 +2,29 @@
 import "../styles/style.css";
 ---
 
+<div>
+  <h2>Tell us about your experience</h2>
+</div>
 <form class="form_grid">
-  <div>
+  <div class="form_text">
     <label for="name">Name</label>
     <input class="input_1" type="text" name="name" required />
   </div>
-  <div>
-    <label for="overskrift">Heading</label>
-    <input type="text" name="overskrift" required />
-  </div>
-  <div>
+
+  <div class="form_text">
     <label for="text">Review text</label>
     <input class="input_3" type="text" name="text" required />
   </div>
-  <button>SUBMIT</button>
+
+  <div class="grid_submit">
+    <button>SUBMIT</button>
+  </div>
 </form>
 <script>
-  const url = "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse";
-  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
+  const url =
+    "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndscnV0ZWR0aWhxd2t1Z3ptY21pIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODcwNTYsImV4cCI6MTk5NDM2MzA1Nn0.F5VBPCrTKdlJ0bp8Cc3UbOICDSkA-Fn26ybayxENve4";
 
   const form = document.querySelector("form");
   form.addEventListener("submit", sendForm);
@@ -46,19 +51,29 @@ import "../styles/style.css";
 </script>
 
 <style>
+  .form_text {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1;
+  }
   button {
     list-style-type: none;
     border: solid #cf2e2e;
-    border-radius: 5px;
     background-color: #fffef3;
     padding: 10px 40px 10px 40px;
-    margin: 10px;
     transition-duration: 0.4s;
-    grid-column: 2;
+    grid-column: 1;
     margin-top: 30px;
     margin-bottom: 50px;
   }
 
+  .grid_submit {
+    display: flex;
+    grid-row: 3;
+    grid-column: 1;
+    justify-content: end;
+  }
   a {
     text-decoration: none;
     color: #cf2e2e;
@@ -72,9 +87,7 @@ import "../styles/style.css";
   input {
     background-color: #fffef3;
     border: solid #cf2e2e;
-    border-radius: 5px;
     padding: 10px 40px 10px 40px;
-    margin: 10px;
   }
 
   label {
@@ -86,6 +99,7 @@ import "../styles/style.css";
 
   .form_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 </style>
