@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Mainlayout from "../layouts/Mainlayout.astro";
 import Form from "../components/Form.astro";
 import Testimonial from "../components/Testimonial.astro";
+import Animation from "../components/Animation.astro";
 
 const url =
   "https://wlrutedtihqwkugzmcmi.supabase.co/rest/v1/testimonials_ovelse?approved=is.true";
@@ -251,6 +252,10 @@ function getFirstNChars(str, length) {
         </div>
         <div class="tider">
           <img src="/img/tider.webp" alt="Åbningstider København Delikatesse" />
+        </div>
+
+        <div>
+          <Animation size="small" name="loading" />
         </div>
       </div>
     </main>
